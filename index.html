@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user.scalable=no">
+    <title>點擊式畫廊</title>
+</head>
+
+<body>
+    <header>
+        <h1>點擊式畫廊</h1>
+        <p>以下參考 <a href="https://www.w3schools.com/colors/colors_hex.asp">W3的教學</a></p>
+    </header>
+    <div id="container">
+        <!--  圖片廊  -->
+        <div class="slides">
+            <h5>No1</h5>
+            <img src="https://live.staticflickr.com/82/239997306_b91f63defd_h.jpg">
+        </div>
+        <div class="slides">
+            <h5>No2</h5>
+            <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/01/23/1/11315905.jpg&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600&w=930&nt=1"
+                alt="">
+        </div>
+        <div class="slides">
+            <h5>No3</h5>
+            <img src="https://www.mirrormedia.com.tw/assets/images/20210123155704-f488d61c52c5977189ceca878526f754-mobile.jpg"
+                alt="">
+        </div>
+        <div class="slides">
+            <h5>No4</h5>
+            <img src="https://im.marieclaire.com.tw/s805c452h100b0/assets/mc/202101/600912DCD15F41611207388.jpeg"
+                alt="">
+        </div>
+        <div class="slides">
+            <h5>No5</h5>
+            <img src="https://im.marieclaire.com.tw/s805c452h100b0/assets/mc/202101/600912BA070001611207354.jpeg"
+                alt="">
+        </div>
+        <!--  前後切換鈕  -->
+        <a href="" class="prev" onclick="plusSlides(-1)">&#10094</a>
+        <a href="" class="next" onclick="plusSlides(1)">&#10095</a>
+        <!--  圖片資訊欄  -->
+        <div class="caption-wrap">
+            <p id="caption"></p>
+        </div>
+        <!--  圖片選取區  -->
+        <div class="btn-box">
+            <div class="btn"><img src="https://live.staticflickr.com/82/239997306_b91f63defd_h.jpg" alt="" class="medo"
+                    onclick="currentSlide(1)"></div>
+            <div class="btn"><img
+                    src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/01/23/1/11315905.jpg&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600&w=930&nt=1"
+                    alt="" class="medo" onclick="currentSlide(2)"></div>
+            <div class="btn"><img
+                    src="https://www.mirrormedia.com.tw/assets/images/20210123155704-f488d61c52c5977189ceca878526f754-mobile.jpg"
+                    alt="" class="medo" onclick="currentSlide(3)"></div>
+            <div class="btn"><img
+                    src="https://im.marieclaire.com.tw/s805c452h100b0/assets/mc/202101/600912DCD15F41611207388.jpeg"
+                    alt="" class="medo" onclick="currentSlide(4)"></div>
+            <div class="btn"><img
+                    src="https://im.marieclaire.com.tw/s805c452h100b0/assets/mc/202101/600912BA070001611207354.jpeg"
+                    alt="" class="medo" onclick="currentSlide(5)"></div>
+        </div>
+    </div>
+</body>
+
+</html>
