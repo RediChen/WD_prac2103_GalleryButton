@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    // box-sizing: border-box;
+    //TODO 效果待拿掉測試
+}
+body {
+    background-color: antiqueWhite;
+}
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: deepSkyBlue;
+}
+a:hover {
+    color: mediumOrchid;
+}
+a:active {
+    color: skyBlue;
+}
+//通用設定 END =========================
+#container {
+    position: relative; //為了arrow能絕對定位
+
+    //圖片廊 ========
+    .slides {
+        display: none; //預設不顯示
+        h5 {
+            //圖片小標
+            color: #f2f2f2;
+            font-size: 1em;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    $bd-rd: 20%; //圓角比例
+    //箭頭鈕 ========
+    .prev,
+    .next {
+        font-size: 3em;
+        font-weight: bold;
+        position: absolute;
+        // top: 40%;
+        padding: 0.5em 1em;
+        user-select: none; //讓使用者無法選取反白文字型態的符號
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    }
+    .prev {
+        border-radius: 0 $bd-rd $bd-rd 0;
+    }
+    .next {
+        right: 0;
+        border-radius: $bd-rd 0 0 $bd-rd;
+    }
+    //資訊欄 ========
+    .caption-wrap {
+        text-align: center;
+        background-color: #222;
+        padding: 8px 12px;
+        color : white ;
+    }
+    //圖片選取區 ========
+    .btn-box {
+        display: flex;
+        justify-content: center;
+        .btn {
+            flex-grow: 1;
+            &::after {
+                // content: "";
+                // display: table;
+                clear: none;
+            }
+
+            .demo {
+                opacity: 0.6;
+            }
+            .demo:hover, .active {
+                opacity: 1;
+            }
+        }
+    }
+}
