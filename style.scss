@@ -10,7 +10,7 @@ a:link,
 a:visited {
     text-decoration: none;
     color: deepSkyBlue;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 a:hover {
     color: mediumOrchid;
@@ -21,14 +21,15 @@ a:active {
 //通用設定 END =========================
 header {
     text-align: center;
+    margin: 0 15%;
     hr {
-        margin: 0 15%;
         border-color: brown;
     }
 }
 #container {
     $w-unit: 150px;
     width: 5 * $w-unit;
+    max-height: min-content;
     margin: 0 auto;
     position: relative; //為了arrow能絕對定位
 
@@ -55,15 +56,17 @@ header {
         font-size: 3em;
         font-weight: bold;
         position: absolute;
-        top: 20%;
-        padding: 0.5em 1em;
+        top: 35%;
+        padding: 10px 15px;
         user-select: none; //讓使用者無法選取反白文字型態的符號
         &:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: aliceblue;
         }
     }
     #prev {
         border-radius: 0 $bd-rd $bd-rd 0;
+        padding-left: 20px;
     }
     #next {
         right: 0;

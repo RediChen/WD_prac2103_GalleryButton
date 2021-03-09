@@ -12,8 +12,8 @@ a:link,
 a:visited {
   text-decoration: none;
   color: deepSkyBlue;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 a:hover {
@@ -26,15 +26,18 @@ a:active {
 
 header {
   text-align: center;
+  margin: 0 15%;
 }
 
 header hr {
-  margin: 0 15%;
   border-color: brown;
 }
 
 #container {
   width: 750px;
+  max-height: -webkit-min-content;
+  max-height: -moz-min-content;
+  max-height: min-content;
   margin: 0 auto;
   position: relative;
 }
@@ -61,8 +64,8 @@ header hr {
   font-size: 3em;
   font-weight: bold;
   position: absolute;
-  top: 20%;
-  padding: 0.5em 1em;
+  top: 35%;
+  padding: 10px 15px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -71,11 +74,13 @@ header hr {
 
 #container #prev:hover,
 #container #next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: aliceblue;
 }
 
 #container #prev {
   border-radius: 0 20% 20% 0;
+  padding-left: 20px;
 }
 
 #container #next {
