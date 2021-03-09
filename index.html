@@ -12,60 +12,69 @@
 <body>
     <header>
         <h1>點擊式畫廊</h1>
-        <p>作法參考 <a href="https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp" target="blank">W3的教學</a></p>
+        <hr>
     </header>
     <div id="container">
         <!--  圖片廊  -->
         <div class="slides">
-            <h5>No1</h5>
+            <h5>1 / 5</h5>
             <img src="https://live.staticflickr.com/82/239997306_b91f63defd_h.jpg">
         </div>
         <div class="slides">
-            <h5>No2</h5>
+            <h5>2 / 5</h5>
             <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/01/23/1/11315905.jpg&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600&w=930&nt=1"
                 alt="">
         </div>
         <div class="slides">
-            <h5>No3</h5>
+            <h5>3 / 5</h5>
             <img src="https://www.mirrormedia.com.tw/assets/images/20210123155704-f488d61c52c5977189ceca878526f754-mobile.jpg"
                 alt="">
         </div>
         <div class="slides">
-            <h5>No4</h5>
+            <h5>4 / 5</h5>
             <img src="https://im.marieclaire.com.tw/s805c452h100b0/assets/mc/202101/600912DCD15F41611207388.jpeg"
                 alt="">
         </div>
         <div class="slides">
-            <h5>No5</h5>
+            <h5>5 / 5</h5>
             <img src="https://im.marieclaire.com.tw/s805c452h100b0/assets/mc/202101/600912BA070001611207354.jpeg"
                 alt="">
         </div>
         <!--  前後切換鈕  -->
-        <a href="" class="prev" onclick="plusSlides(-1)">&#10094</a>
-        <a href="" class="next" onclick="plusSlides(1)">&#10095</a>
+        <a id="prev" onclick="plusSlides(-1)">&#10094</a>
+        <a id="next" onclick="plusSlides(1)" >&#10095</a>
+        <!-- 必須將a當中的href拿掉，才能取消預設的連結功能。 -->
         <!--  圖片資訊欄  -->
         <div class="caption-wrap">
             <p id="caption"></p>
         </div>
         <!--  圖片選取區  -->
         <div class="btn-box">
-            <div class="btn"><img src="https://live.staticflickr.com/82/239997306_b91f63defd_h.jpg" alt="" class="demo"
-                    onclick="currentSlide(1)"></div>
-            <div class="btn"><img
-                    src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/01/23/1/11315905.jpg&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600&w=930&nt=1"
-                    alt="" class="demo" onclick="currentSlide(2)"></div>
-            <div class="btn"><img
-                    src="https://www.mirrormedia.com.tw/assets/images/20210123155704-f488d61c52c5977189ceca878526f754-mobile.jpg"
-                    alt="" class="demo" onclick="currentSlide(3)"></div>
-            <div class="btn"><img
-                    src="https://im.marieclaire.com.tw/s805c452h100b0/assets/mc/202101/600912DCD15F41611207388.jpeg"
-                    alt="" class="demo" onclick="currentSlide(4)"></div>
-            <div class="btn"><img
-                    src="https://im.marieclaire.com.tw/s805c452h100b0/assets/mc/202101/600912BA070001611207354.jpeg"
-                    alt="" class="demo" onclick="currentSlide(5)"></div>
+            <div class="btn">
+                <img alt="白毛" class="demo" onclick="currentSlide(0)"
+                    src="https://live.staticflickr.com/82/239997306_b91f63defd_h.jpg">
+            </div>
+            <div class="btn">
+                <img alt="草莓" class="demo" onclick="currentSlide(1)"
+                    src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/01/23/1/11315905.jpg&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600&w=930&nt=1">
+            </div>
+            <div class="btn">
+                <img alt="咖啡" class="demo" onclick="currentSlide(2)"
+                    src="https://www.mirrormedia.com.tw/assets/images/20210123155704-f488d61c52c5977189ceca878526f754-mobile.jpg">
+            </div>
+            <div class="btn">
+                <img alt="真車" class="demo" onclick="currentSlide(3)"
+                    src="https://im.marieclaire.com.tw/s805c452h100b0/assets/mc/202101/600912DCD15F41611207388.jpeg">
+            </div>
+            <div class="btn">
+                <img alt="車二" class="demo" onclick="currentSlide(4)"
+                    src="https://im.marieclaire.com.tw/s805c452h100b0/assets/mc/202101/600912BA070001611207354.jpeg">
+            </div>
         </div>
     </div>
-
+    <footer>
+        <p>作法參考 <a href="https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp" target="blank">W3的教學</a></p>
+    </footer>
     <script src="./main.js"></script>
 </body>
 

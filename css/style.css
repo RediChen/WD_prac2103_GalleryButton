@@ -12,6 +12,8 @@ a:link,
 a:visited {
   text-decoration: none;
   color: deepSkyBlue;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 a:hover {
@@ -22,31 +24,44 @@ a:active {
   color: skyBlue;
 }
 
+header {
+  text-align: center;
+}
+
+header hr {
+  margin: 0 15%;
+  border-color: brown;
+}
+
 #container {
+  width: 750px;
+  margin: 0 auto;
   position: relative;
 }
 
 #container .slides {
-  display: none;
+  text-align: center;
 }
 
 #container .slides h5 {
   color: #f2f2f2;
-  font-size: 1em;
+  font-size: 2em;
   padding: 8px 12px;
   position: absolute;
   top: 0;
 }
 
 #container .slides img {
-  width: 100%;
+  width: 750px;
+  height: auto;
 }
 
-#container .prev,
-#container .next {
+#container #prev,
+#container #next {
   font-size: 3em;
   font-weight: bold;
   position: absolute;
+  top: 20%;
   padding: 0.5em 1em;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -54,25 +69,28 @@ a:active {
           user-select: none;
 }
 
-#container .prev:hover,
-#container .next:hover {
+#container #prev:hover,
+#container #next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-#container .prev {
+#container #prev {
   border-radius: 0 20% 20% 0;
 }
 
-#container .next {
+#container #next {
   right: 0;
   border-radius: 20% 0 0 20%;
 }
 
 #container .caption-wrap {
+  width: 750px;
   text-align: center;
-  background-color: #222;
-  padding: 8px 12px;
+  margin: 0 auto;
+  background-color: #222222dd;
+  padding: 12px 0 8px;
   color: white;
+  font-size: 1.5em;
 }
 
 #container .btn-box {
@@ -84,21 +102,28 @@ a:active {
           justify-content: center;
 }
 
-#container .btn-box .btn {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-#container .btn-box .btn::after {
-  clear: none;
-}
-
 #container .btn-box .btn .demo {
-  opacity: 0.6;
+  height: 150px;
+  width: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: invert(0.3);
+          filter: invert(0.3);
 }
 
-#container .btn-box .btn .demo:hover, #container .btn-box .btn .active {
-  opacity: 1;
+#container .btn-box .btn:first-child > .demo {
+  -o-object-position: 0 50%;
+     object-position: 0 50%;
+}
+
+#container .btn-box .btn .demo:hover,
+#container .btn-box .btn .active {
+  -webkit-filter: invert(0);
+          filter: invert(0);
+}
+
+footer {
+  margin-top: 1em;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
