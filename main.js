@@ -1,7 +1,10 @@
+// 全域變數區 ===================
 var slideIndex = 0 ;//count from 0
+
+// 馬上執行區 ===================
 showSlides(slideIndex) ;
 
-//函數宣告區 ===================
+// 函數宣告區 ===================
 function showSlides(n) {
     var i ;//for 迴圈用的這個變數不會被關在for裡頭，而會被提昇到這裡。
     var slides = document.getElementsByClassName("slides") ;
@@ -26,7 +29,7 @@ function showSlides(n) {
     slides[slideIndex].style.display = "block" ;
     // 主角點點啟動
     dots[slideIndex].className += " active" ;
-    // 給予主角的資訊
+    // 主角資訊顯現
     showText.innerHTML = dots[slideIndex].alt ;
 }
 
